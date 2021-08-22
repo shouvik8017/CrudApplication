@@ -26,7 +26,7 @@ class Home_controller extends CI_Controller
 
 		$datas = [];
 		
-		$per_page = 3;
+		$per_page = 10;
 		$this->db->select('*');
 		$this->db->from('products_200');
 		if ($this->input->post('search')) 
@@ -187,12 +187,12 @@ class Home_controller extends CI_Controller
 		if ($resp) 
 		{
 			$this->session->set_flashdata('success','Product Details Deleted Successfully');
-			redirect('dashboard');
+			redirect('Home_controller/dashboard');
 		}
 		else
 		{
 			$this->session->set_flashdata('error','Product Details Can not Deleted Successfully');
-			redirect('dashboard');
+			redirect('Home_controller/dashboard');
 		}
 
 	}
