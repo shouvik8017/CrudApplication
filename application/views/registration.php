@@ -44,7 +44,7 @@
 
 					<div class="col-md-12">
 						<label for="email" class="form-label">Email-Id</label>
-						<input type="email" class="form-control" minlength="10" maxlength="10" name="email" id="email" value="<?php echo set_value('email'); ?>" required>
+						<input type="email" class="form-control" name="email" id="email" value="<?php echo set_value('email'); ?>" required>
 						<span class="text-danger"><?php echo form_error('email'); ?></span>
 						<div class="invalid-feedback">
 							Please enter a Valid Email Address.
@@ -58,7 +58,7 @@
 						<label for="phone" class="form-label">Phone No</label>
 						<div class="input-group has-validation">
 							<span class="input-group-text" id="inputGroupPrepend">+91</span>
-							<input type="text" class="form-control" onkeypress="return isNumber(event)"  name="phone" id="phone" aria-describedby="inputGroupPrepend" value="<?php echo set_value('phone'); ?>" required>
+							<input type="text" class="form-control" minlength="10" maxlength="10" onkeypress="return isNumber(event)"  name="phone" id="phone" aria-describedby="inputGroupPrepend" value="<?php echo set_value('phone'); ?>" required>
 							<div class="invalid-feedback">
 								Please enter a Valid Phone No.
 							</div>
